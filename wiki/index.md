@@ -14,6 +14,18 @@ Content catalog. Auto-updated on every ingest.
 | [[summaries/linux-network-stack]] | Linux网络协议栈完整流程，sk_buff核心结构 | Linux 网络协议栈.md |
 | [[summaries/linux-io-mechanism]] | Linux IO栈架构，Block层→SCSI层→驱动→硬件 | Linux IO全景介绍.md |
 | [[summaries/linux-lock-mechanisms]] | Linux内核锁机制全景对比，Spinlock/Mutex/RCU等 | Linux 锁机制全景介绍.md |
+| [[summaries/linux-io-scheduler]] | Linux IO调度算法：noop/deadline/cfq/mq-deadline/bfq | Linux IO调度算法.md |
+| [[summaries/dfx-tools-overview]] | DFX工具总览，CPU/Trace/内存/vmcore/IO/网络分析 | DFX工具 |
+| [[summaries/perf-tool]] | perf性能分析工具，事件采样、火焰图、调度轨迹 | DFX工具/==CPU== |
+| [[summaries/flamegraph-tool]] | 火焰图可视化分析，CPU调用栈热点定位 | DFX工具/==设置trace点== |
+| [[summaries/ftrace-kprobe-tools]] | ftrace与kprobe内核追踪，函数调用链分析 | DFX工具/==设置trace点== |
+| [[summaries/kvmtop-tool]] | kvmtop虚拟机监控，EXT指标、%ST抢占分析 | DFX工具/==CPU== |
+| [[summaries/vmcore-analysis]] | vmcore崩溃转储解析，crash工具、寄存器分析 | DFX工具/==vmcore解析== |
+| [[summaries/gdb-debugging]] | GDB调试指南，QEMU初始化调试、常用命令 | DFX工具/==gdb调试== |
+| [[summaries/io-tools]] | IO性能工具：iostat/fio/dd/blktrace | DFX工具/==IO== |
+| [[summaries/memory-analysis-tools]] | 内存分析：NUMA分布、slab分析、内存预占 | DFX工具/==内存== |
+| [[summaries/interrupt-monitoring]] | 中断实时监控脚本，/proc/interrupts分析 | DFX工具/==中断== |
+| [[summaries/network-tools]] | 网络性能工具：iperf带宽测试 | DFX工具/==网络== |
 
 ---
 
@@ -34,12 +46,16 @@ Content catalog. Auto-updated on every ingest.
 | [[concepts/linux-spinlock]] | 自旋锁：忙等待锁，适用于中断和极短临界区 |
 | [[concepts/linux-mutex]] | 互斥锁：睡眠锁，适用于进程上下文和长时间临界区 |
 | [[concepts/linux-rcu]] | Read-Copy-Update：无锁机制，读者零开销，适用于读极多写极少 |
+| [[concepts/crash-analysis]] | crash工具分析技术，mutex owner解码、进程结构体查看 |
+| [[concepts/registers-analysis]] | 寄存器分析技术，x86_64/ARM64调用约定、崩溃诊断 |
+| [[concepts/kvm-virtualization]] | KVM虚拟化性能指标：%ST、EXT、超分场景分析 |
+| [[concepts/task-struct]] | task_struct与mm_struct，进程/内存描述符结构关系 |
 
 ---
 
 ## Meta
 
-- **Total Sources**: 4
-- **Total Summaries**: 4
-- **Total Concepts**: 3
+- **Total Sources**: 35
+- **Total Summaries**: 16
+- **Total Concepts**: 7
 - **Last Updated**: 2026-05-11
