@@ -26,6 +26,12 @@ Content catalog. Auto-updated on every ingest.
 | [[summaries/memory-analysis-tools]] | 内存分析：NUMA分布、slab分析、内存预占 | DFX工具/==内存== |
 | [[summaries/interrupt-monitoring]] | 中断实时监控脚本，/proc/interrupts分析 | DFX工具/==中断== |
 | [[summaries/network-tools]] | 网络性能工具：iperf带宽测试 | DFX工具/==网络== |
+| [[summaries/virtio-architecture]] | Virtio整体架构：前后端、Vring、性能演进 | Linux虚拟化/IO虚拟化 |
+| [[summaries/virtio-notification-mechanism]] | Virtio消息通知：ioeventfd+irqfd零拷贝机制 | Linux虚拟化/IO虚拟化 |
+| [[summaries/virtio-vring-mechanism]] | Virtio Vring数据共享：desc/avail/used环形缓冲 | Linux虚拟化/IO虚拟化 |
+| [[summaries/virtio-device-types]] | Virtio设备类型：virtio-blk/scsi/net、vDPA直通 | Linux虚拟化/IO虚拟化 |
+| [[summaries/kvm-interrupt-injection]] | KVM中断注入机制：VGIC、irqfd、路由表 | Linux虚拟化/中断虚拟化 |
+| [[summaries/kvm-live-migration]] | KVM热迁移机制：内存拷贝三阶段、命令参数 | Linux虚拟化/热迁移 |
 
 ---
 
@@ -50,12 +56,15 @@ Content catalog. Auto-updated on every ingest.
 | [[concepts/registers-analysis]] | 寄存器分析技术，x86_64/ARM64调用约定、崩溃诊断 |
 | [[concepts/kvm-virtualization]] | KVM虚拟化性能指标：%ST、EXT、超分场景分析 |
 | [[concepts/task-struct]] | task_struct与mm_struct，进程/内存描述符结构关系 |
+| [[concepts/virtio]] | Virtio核心概念：半虚拟化I/O框架，前后端通信机制 |
+| [[concepts/ioeventfd-irqfd]] | ioeventfd与irqfd机制：KVM零拷贝通知机制 |
+| [[concepts/vring]] | Vring环形缓冲区：desc/avail/used三表数据共享 |
 
 ---
 
 ## Meta
 
-- **Total Sources**: 35
-- **Total Summaries**: 16
-- **Total Concepts**: 7
+- **Total Sources**: 48
+- **Total Summaries**: 22
+- **Total Concepts**: 10
 - **Last Updated**: 2026-05-11

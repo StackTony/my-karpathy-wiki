@@ -55,3 +55,17 @@ Format: `## [YYYY-MM-DD] operation | Title`
 
 - Created summaries/linux-io-scheduler.md
 - Source: `raw/sources/Linux 操作系统/Linux IO机制/Linux IO调度算法.md`
+
+## [2026-05-11] ingest | Linux虚拟化系列文档
+
+- Created summaries/virtio-architecture.md (Virtio整体架构)
+- Created summaries/virtio-notification-mechanism.md (ioeventfd+irqfd通知机制)
+- Created summaries/virtio-vring-mechanism.md (Vring数据共享机制)
+- Created summaries/virtio-device-types.md (virtio-blk/scsi/net设备类型)
+- Created summaries/kvm-interrupt-injection.md (KVM中断注入机制)
+- Created summaries/kvm-live-migration.md (热迁移机制)
+- Created concepts/virtio.md (Virtio核心概念)
+- Created concepts/ioeventfd-irqfd.md (零拷贝通知机制)
+- Created concepts/vring.md (Vring环形缓冲区)
+- Updated index.md with all new entries
+- Source: `raw/sources/Linux 虚拟化/` (含IO虚拟化、中断虚拟化、网络虚拟化、热迁移等子目录)
