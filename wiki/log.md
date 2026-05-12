@@ -80,3 +80,54 @@ Format: `## [YYYY-MM-DD] operation | Title`
 - Updated index.md with new entries
 - Source: `raw/sources/Kunbernetes和Docker/容器运行时 containerd.md` (新增)
 - Source: `raw/sources/Linux 虚拟化/热迁移/热迁移流程.md` (修改)
+
+## [2026-05-12] ingest | Linux内存管理与进程调度
+
+- Created summaries/linux-meminfo.md (/proc/meminfo详解)
+- Created summaries/linux-scheduler.md (进程调度器、CFS机制)
+- Created concepts/linux-memory-management.md (内存分配接口、黑洞问题)
+- Created concepts/cfs-scheduler.md (完全公平调度器、红黑树、vruntime)
+- Created concepts/linux-scheduling-policy.md (SCHED_OTHER/FIFO/RR三种策略)
+- Updated index.md with new entries
+- Source: `raw/sources/Linux 操作系统/Linux 内存管理/Linux meminfo参数详细解释.md` (新增)
+- Source: `raw/sources/Linux 操作系统/Linux 进程调度/Linux 进程调度器.md` (新增)
+- Source: `raw/sources/Linux 操作系统/Linux 进程调度/Linux 进程调度策略.md` (新增)
+- Note: `linux学习结构.md` 为学习规划目录，非知识内容，未创建摘要
+
+## [2026-05-12] query | Linux常用网络协议问答
+
+- 用户提问："Linux常用的网络协议有哪些"
+- 综合已有知识整理回答，包含TCP/UDP/IP/ICMP/ARP等协议详解
+- 将有价值回答存回wiki
+- Created summaries/linux-network-protocols.md
+- Created concepts/linux-networking.md
+- Updated index.md with new entries
+
+## [2026-05-12] ingest | Linux网络与中断补充
+
+- Updated summaries/linux-network-protocols.md（新增LACP链路聚合协议）
+- Updated summaries/linux-irq-interrupt.md（确认IPI内容已覆盖）
+- 新增源文件：
+  - `raw/sources/Linux 操作系统/Linux 网络/Linux 常见的网络协议.md`（已合并到现有摘要）
+  - `raw/sources/Linux 操作系统/Linux 网络/Linux 网络协议栈.md`（已有摘要覆盖）
+  - `raw/sources/Linux 操作系统/Linux 中断系统/Linux IRQ中断.md`（已有摘要覆盖）
+
+## [2026-05-12] full-sync | 全量更新索引
+
+全量对比检查raw/sources与wiki内容：
+
+**新增摘要（4篇）**：
+- summaries/vgic-interrupt-virtualization.md（VGIC中断虚拟化）
+- summaries/device-passthrough.md（IOMMU/SR-IOV/VFIO/vDPA设备直通）
+- summaries/virtio-device-init.md（Virtio设备初始化流程）
+- summaries/virtio-net-forwarding.md（virtio-net内核态网络转发）
+
+**去重处理**：
+- `Linux IRQ中断.md`：两处重复源文件（Linux操作系统/ 和 Linux中断系统/），合并为同一摘要
+- `Linux 网络协议栈.md`：两处重复源文件，合并为同一摘要
+- `linux学习结构.md`：学习规划目录，跳过
+
+**索引更新**：
+- 更新wiki/index.md，整合所有摘要
+- 添加去重说明章节
+- 统计更新：Sources 56, Summaries 30, Concepts 17
