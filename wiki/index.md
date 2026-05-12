@@ -31,7 +31,8 @@ Content catalog. Auto-updated on every ingest.
 | [[summaries/virtio-vring-mechanism]] | Virtio Vring数据共享：desc/avail/used环形缓冲 | Linux虚拟化/IO虚拟化 |
 | [[summaries/virtio-device-types]] | Virtio设备类型：virtio-blk/scsi/net、vDPA直通 | Linux虚拟化/IO虚拟化 |
 | [[summaries/kvm-interrupt-injection]] | KVM中断注入机制：VGIC、irqfd、路由表 | Linux虚拟化/中断虚拟化 |
-| [[summaries/kvm-live-migration]] | KVM热迁移机制：内存拷贝三阶段、命令参数 | Linux虚拟化/热迁移 |
+| [[summaries/kvm-live-migration]] | KVM热迁移机制：内存拷贝三阶段、网络恢复时序 | Linux虚拟化/热迁移 |
+| [[summaries/containerd-runtime]] | Containerd容器运行时：CRI/OCI、架构与ctr命令 | Kunbernetes和Docker |
 
 ---
 
@@ -59,12 +60,15 @@ Content catalog. Auto-updated on every ingest.
 | [[concepts/virtio]] | Virtio核心概念：半虚拟化I/O框架，前后端通信机制 |
 | [[concepts/ioeventfd-irqfd]] | ioeventfd与irqfd机制：KVM零拷贝通知机制 |
 | [[concepts/vring]] | Vring环形缓冲区：desc/avail/used三表数据共享 |
+| [[concepts/containerd]] | Containerd：工业级容器运行时，从Docker分离的管理层 |
+| [[concepts/cri]] | CRI：Kubernetes容器运行时接口，解耦kubelet与运行时 |
+| [[concepts/oci]] | OCI：开放容器标准，镜像结构+运行时接口规范 |
 
 ---
 
 ## Meta
 
-- **Total Sources**: 48
-- **Total Summaries**: 22
-- **Total Concepts**: 10
-- **Last Updated**: 2026-05-11
+- **Total Sources**: 49
+- **Total Summaries**: 23
+- **Total Concepts**: 13
+- **Last Updated**: 2026-05-12

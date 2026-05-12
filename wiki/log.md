@@ -69,3 +69,14 @@ Format: `## [YYYY-MM-DD] operation | Title`
 - Created concepts/vring.md (Vring环形缓冲区)
 - Updated index.md with all new entries
 - Source: `raw/sources/Linux 虚拟化/` (含IO虚拟化、中断虚拟化、网络虚拟化、热迁移等子目录)
+
+## [2026-05-12] ingest | Containerd容器运行时
+
+- Created summaries/containerd-runtime.md (Containerd运行时完整指南)
+- Created concepts/containerd.md (Containerd核心概念)
+- Created concepts/cri.md (CRI容器运行时接口)
+- Created concepts/oci.md (OCI开放容器标准)
+- Updated summaries/kvm-live-migration.md (新增网络迁移时序图、详细流程)
+- Updated index.md with new entries
+- Source: `raw/sources/Kunbernetes和Docker/容器运行时 containerd.md` (新增)
+- Source: `raw/sources/Linux 虚拟化/热迁移/热迁移流程.md` (修改)

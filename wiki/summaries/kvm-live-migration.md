@@ -1,7 +1,7 @@
 ---
 title: KVM 热迁移机制
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-12
 tags: [KVM, 热迁移, libvirt, 虚拟化]
 sources: [Linux虚拟化/热迁移]
 ---
@@ -95,6 +95,62 @@ threshold_size = bandwidth * downtime_limit
 ├── 最大带宽拷贝剩余脏页
 └── 目的端启动
 ```
+
+## 网络迁移时序图
+
+```mermaid
+sequenceDiagram
+    participant 源VM
+    participant 源QEMU
+    participant 源网络(nova)
+    participant 目的QEMU
+    participant 目的VM
+    participant 目的网络(nova)
+    participant 物理交换机
+
+    rect rgb(200, 220, 240)
+        Note over 源VM,目的QEMU: 内存迁移阶段
+        源QEMU->>目的QEMU: 迁移 virtio-net 设备状态
+        源QEMU->>目的QEMU: 迁移内存 (含 vring 数据)
+        源QEMU->>目的QEMU: 若是vhost: GET_VRING_BASE
+    end
+
+    rect rgb(255, 230, 200)
+        Note over 源VM,目的VM: 停机拷贝阶段
+        源QEMU->>源VM: 停止 VM
+        源QEMU->>目的QEMU: 拷贝剩余脏页/状态
+    end
+
+    rect rgb(220, 255, 220)
+        Note over 目的QEMU,物理交换机: 网络恢复阶段
+        目的网络(nova)->>目的网络(nova): 下发流表
+        目的QEMU->>目的VM: 启动 VM
+        目的QEMU->>目的网络(nova): 激活网桥端口
+        目的VM->>物理交换机: 发送 RARP/GARP 广播
+        物理交换机->>物理交换机: 更新 CAM 表 (MAC→新端口)
+    end
+
+    rect rgb(255, 255, 200)
+        Note over 源网络(nova),源QEMU: 清理阶段
+        源网络(nova)->>源网络(nova): 删除旧流表
+        源QEMU->>源QEMU: 清理源端资源
+    end
+```
+
+## 迁移详细流程
+
+```
+qemuMigrationSrcPerformPeer2Peer3
+├── qemuMigrationSrcBeginPhase → 解析传入虚拟机XML
+├── domainMigratePrepare3 → 远程创建目的端domain
+├── qemuMigrationSrcPerformNative → 开始数据迁移动作
+├── domainMigrateFinish3 → 等待目的端完成
+└── qemuMigrationSrcConfirmPhase → 清理源端or目的端
+```
+
+### incoming 接收端
+
+目的端启动 qemu 监听 incoming，接收数据传输完成后修改状态位。
 
 ## 相关链接
 
