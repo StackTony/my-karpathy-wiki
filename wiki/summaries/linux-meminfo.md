@@ -1,9 +1,10 @@
 ---
 title: Linux Meminfo 内存统计详解
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-13
 tags: [Linux, 内存管理, meminfo, /proc]
-sources: [Linux操作系统/Linux内存管理]
+source_dir: Linux操作系统/Linux内存管理
+source_files: [Linux meminfo参数详细解释.md]
 ---
 
 # Linux Meminfo 内存统计详解

@@ -1,9 +1,10 @@
 ---
 title: Linux 常用网络协议
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-13
 tags: [Linux, 网络协议, TCP, UDP, IP, ICMP]
-sources: [问答整理, Linux操作系统/Linux网络]
+source_dir: Linux操作系统/Linux网络
+source_files: [Linux 常见的网络协议.md]
 ---
 
 # Linux 常用网络协议

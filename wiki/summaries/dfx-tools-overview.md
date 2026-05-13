@@ -1,9 +1,10 @@
 ---
 title: DFX 工具总览
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [DFX, 调试, 性能分析, Linux]
-sources: [DFX工具]
+source_dir: DFX工具
+source_files: [==CPU==/火焰图抓取CPU占用情况.md, ==CPU==/kprobe抓CPU单核调度轨迹.md]
 ---
 
 # DFX 工具总览

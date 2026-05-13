@@ -1,9 +1,10 @@
 ---
 title: ftrace 与 kprobe 追踪工具
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [ftrace, kprobe, trace, 内核调试, DFX]
-sources: [DFX工具/==设置trace点==]
+source_dir: DFX工具/==设置trace点==
+source_files: [1 ftrace和kprobe和bpftrace.md, trace：ftrace使用方法.md, trace：kprobe使用方式.md]
 ---
 
 # ftrace 与 kprobe 追踪工具

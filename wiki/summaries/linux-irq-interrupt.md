@@ -1,9 +1,10 @@
 ---
 title: Linux IRQ中断机制
 created: 2026-05-11
-updated: 2026-05-12
+updated: 2026-05-13
 tags: [irq, 中断, kernel]
-sources: [Linux IRQ中断]
+source_dir: Linux操作系统/Linux中断系统
+source_files: [Linux IRQ中断.md]
 ---
 
 ## 概述

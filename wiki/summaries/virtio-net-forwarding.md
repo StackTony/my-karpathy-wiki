@@ -1,9 +1,10 @@
 ---
 title: Virtio-net 内核态网络转发
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-13
 tags: [virtio, 网络, 内核态, 转发]
-sources: [Linux虚拟化/网络虚拟化]
+source_dir: Linux虚拟化/网络虚拟化
+source_files: [virtio-net内核态网络转发流程.md]
 ---
 
 # Virtio-net 内核态网络转发

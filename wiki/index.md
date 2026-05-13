@@ -13,11 +13,14 @@ Content catalog. Auto-updated on every ingest.
 | [[summaries/linux-irq-interrupt]] | Linux IRQ中断机制，核间中断IPI | Linux操作系统/Linux中断系统 |
 | [[summaries/linux-network-stack]] | Linux网络协议栈完整流程，sk_buff核心结构 | Linux操作系统/Linux网络 |
 | [[summaries/linux-network-protocols]] | Linux常用网络协议：TCP/UDP/IP/ICMP/ARP/LACP | Linux操作系统/Linux网络 |
-| [[summaries/linux-io-mechanism]] | Linux IO栈架构，Block层→SCSI层→驱动→硬件 | Linux操作系统/LinuxIO机制 |
-| [[summaries/linux-io-scheduler]] | Linux IO调度算法：noop/deadline/cfq/mq-deadline/bfq | Linux操作系统/LinuxIO机制 |
+| [[summaries/linux-io-mechanism]] | Linux IO栈架构，Block层→SCSI层→驱动→硬件 | Linux操作系统/Linux IO机制 |
+| [[summaries/linux-io-scheduler]] | Linux IO调度算法：noop/deadline/cfq/mq-deadline/bfq | Linux操作系统/Linux IO机制 |
 | [[summaries/linux-lock-mechanisms]] | Linux内核锁机制全景对比，Spinlock/Mutex/RCU等 | Linux操作系统/Linux锁机制 |
 | [[summaries/linux-meminfo]] | /proc/meminfo详解：内存统计、黑洞问题、关系式 | Linux操作系统/Linux内存管理 |
 | [[summaries/linux-scheduler]] | Linux进程调度器：CFS、红黑树、vruntime机制 | Linux操作系统/Linux进程调度 |
+| [[summaries/linux-namespace-cgroups]] | Namespace资源隔离+Cgroups资源限制，容器技术基石 | Linux操作系统/Linux资源隔离 |
+| [[summaries/linux-boot-process]] | Linux启动详细过程：BIOS→MBR→GRUB→内核→init十步流程 | Linux操作系统/Linux系统启动关闭 |
+| [[summaries/linux-shutdown-process]] | Linux关机流程深度解析：进程终止→文件系统卸载→ACPI断电 | Linux操作系统/Linux系统启动关闭 |
 | [[summaries/dfx-tools-overview]] | DFX工具总览，CPU/Trace/内存/vmcore/IO/网络分析 | DFX工具 |
 | [[summaries/perf-tool]] | perf性能分析工具，事件采样、火焰图、调度轨迹 | DFX工具/==CPU== |
 | [[summaries/flamegraph-tool]] | 火焰图可视化分析，CPU调用栈热点定位 | DFX工具/==设置trace点== |
@@ -40,6 +43,12 @@ Content catalog. Auto-updated on every ingest.
 | [[summaries/vgic-interrupt-virtualization]] | VGIC中断虚拟化：GICV2/V3、NON-VHE/VHE模式 | Linux虚拟化/中断虚拟化 |
 | [[summaries/kvm-live-migration]] | KVM热迁移机制：内存拷贝三阶段、网络恢复时序 | Linux虚拟化/热迁移 |
 | [[summaries/containerd-runtime]] | Containerd容器运行时：CRI/OCI、架构与ctr命令 | Kunbernetes和Docker |
+| [[summaries/kubernetes-core-concepts]] | Kubernetes核心概念与架构：Pod/Service/Deployment | Kunbernetes和Docker |
+| [[summaries/tcpdump-tool]] | tcpdump网络抓包分析：过滤表达式、参数详解 | DFX工具/==网络== |
+| [[summaries/vdpa-interrupt-datapath]] | vDPA中断与数据面：硬件直通+virtio控制面 | 问答整理 |
+| [[summaries/binary-tree-basics]] | 二叉树基础：形态、遍历、存储、高频题型 | 数据结构与算法/树 |
+| [[summaries/red-black-tree-detailed]] | 红黑树详解：性质、插入删除操作、与B树等价 | 数据结构与算法/树 |
+| [[summaries/avl-btree-overview]] | AVL树与B树/B+树：对比、数据库索引选择 | 数据结构与算法/树 |
 
 ---
 
@@ -61,7 +70,7 @@ Content catalog. Auto-updated on every ingest.
 | [[concepts/linux-mutex]] | 互斥锁：睡眠锁，适用于进程上下文和长时间临界区 |
 | [[concepts/linux-rcu]] | Read-Copy-Update：无锁机制，读者零开销，适用于读极多写极少 |
 | [[concepts/linux-memory-management]] | Linux内存管理：分配接口、统计分类、黑洞问题 |
-| [[concepts/cfs-scheduler]] | CFS：完全公平调度器，红黑树+vruntime |
+| [[concepts/cfs-scheduler]] | CFS：完全公平调度器，红黑树+vruntime（详见红黑树关联） |
 | [[concepts/linux-scheduling-policy]] | Linux调度策略：SCHED_OTHER/FIFO/RR |
 | [[concepts/linux-networking]] | Linux网络协议：TCP/IP分层模型、协议对比 |
 | [[concepts/crash-analysis]] | crash工具分析技术，mutex owner解码、进程结构体查看 |
@@ -74,15 +83,21 @@ Content catalog. Auto-updated on every ingest.
 | [[concepts/containerd]] | Containerd：工业级容器运行时，从Docker分离的管理层 |
 | [[concepts/cri]] | CRI：Kubernetes容器运行时接口，解耦kubelet与运行时 |
 | [[concepts/oci]] | OCI：开放容器标准，镜像结构+运行时接口规范 |
+| [[concepts/binary-tree]] | 二叉树：最多两子节点的树结构，遍历是核心操作 |
+| [[concepts/red-black-tree]] | 红黑树：弱平衡BST，Linux CFS/epoll核心数据结构 |
+| [[concepts/btree]] | B树/B+树：多路搜索树，数据库/文件系统索引首选 |
+| [[concepts/namespace]] | Namespace：Linux内核资源隔离，容器"看见什么" |
+| [[concepts/cgroups]] | Cgroups：Linux内核资源限制，容器"能用多少" |
+| [[concepts/kubernetes]] | Kubernetes：容器编排平台，Pod/Service/Deployment |
 
 ---
 
 ## Meta
 
-- **Total Sources**: 56
-- **Total Summaries**: 30
-- **Total Concepts**: 17
-- **Last Updated**: 2026-05-12
+- **Total Sources**: 66
+- **Total Summaries**: 39
+- **Total Concepts**: 23
+- **Last Updated**: 2026-05-13
 
 ---
 

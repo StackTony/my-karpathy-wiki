@@ -1,9 +1,10 @@
 ---
 title: KVM 中断注入机制
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [KVM, 中断注入, VGIC, 虚拟化]
-sources: [Linux虚拟化/中断虚拟化]
+source_dir: Linux虚拟化/中断虚拟化
+source_files: [KVM中断注入机制.md]
 ---
 
 # KVM 中断注入机制

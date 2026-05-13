@@ -131,3 +131,128 @@ Format: `## [YYYY-MM-DD] operation | Title`
 - 更新wiki/index.md，整合所有摘要
 - 添加去重说明章节
 - 统计更新：Sources 56, Summaries 30, Concepts 17
+
+## [2026-05-13] ingest | 数据结构与算法系列文档
+
+**新增摘要（3篇）**：
+- summaries/binary-tree-basics.md（二叉树基础：形态、遍历、存储、高频题型）
+- summaries/red-black-tree-detailed.md（红黑树详解：五大性质、插入删除操作、与B树等价性）
+- summaries/avl-btree-overview.md（AVL树与B树/B+树：对比、数据库索引选择原理）
+
+**新增概念（3篇）**：
+- concepts/binary-tree.md（二叉树核心概念）
+- concepts/red-black-tree.md（红黑树：Linux CFS/epoll核心数据结构）
+- concepts/btree.md（B树/B+树：多路搜索树，数据库索引首选）
+
+**更新概念**：
+- concepts/cfs-scheduler.md：新增红黑树关联章节，说明CFS选择红黑树的原因
+
+**知识图谱关联**：
+- 二叉树 → 红黑树 → CFS调度器（数据结构支撑系统模块）
+- B+树 → 数据库索引 → IO调度（磁盘存储结构）
+
+**索引更新**：
+- 更新wiki/index.md，新增数据结构与算法分类
+- 统计更新：Sources 61, Summaries 33, Concepts 20
+- Source: `raw/sources/数据结构与算法/`（含树、图、算法合集子目录）
+
+## [2026-05-13] ingest | Linux资源隔离系列文档
+
+**新增摘要（1篇）**：
+- summaries/linux-namespace-cgroups.md（Namespace资源隔离+Cgroups资源限制，容器技术基石）
+
+**新增概念（2篇）**：
+- concepts/namespace.md（Namespace：Linux内核资源隔离，容器"看见什么"）
+- concepts/cgroups.md（Cgroups：Linux内核资源限制，容器"能用多少"）
+
+**更新摘要/概念**：
+- summaries/containerd-runtime.md：新增Namespace/Cgroups关联链接
+- concepts/cfs-scheduler.md：新增Cgroups cpu子系统关联章节
+
+**知识图谱关联**：
+- Namespace+Cgroups → 容器隔离机制 → containerd运行时
+- Cgroups cpu子系统 → CFS调度器 → cpu.cfs_quota_us限制
+
+**索引更新**：
+- 更新wiki/index.md，新增Linux资源隔离分类
+- 统计更新：Sources 62, Summaries 34, Concepts 22
+- Source: `raw/sources/Linux 操作系统/Linux 资源隔离/Linux Namespace与Cgroups介绍.md`
+
+## [2026-05-13] refactor | sources字段格式统一
+
+**规范更新**：
+- CLAUDE.md新增sources格式规范章节
+- 采用 `source_dir` + `source_files` 分离格式
+
+**格式示例**：
+```yaml
+source_dir: 数据结构与算法/树
+source_files: [红黑树详解.md]
+```
+
+**批量更新**：
+- 33个摘要全部采用新格式
+- 精确追溯每个来源文件
+- 统计更新：所有摘要frontmatter格式一致
+
+## [2026-05-13] query | vDPA中断与数据面机制问答
+
+**用户提问**："vdpa的中断控制面和数据面是怎么运作的？"
+
+**回答整理**：
+- 创建 summaries/vdpa-interrupt-datapath.md（vDPA中断与数据面：硬件直通+virtio控制面）
+- 内容涵盖：数据面DMA直通、控制面virtio标准接口、直接中断注入、热迁移兼容性
+
+**知识图谱关联**：
+- vDPA数据面 → [[summaries/virtio-vring-mechanism]]（硬件直接操作Vring）
+- vDPA中断 → [[summaries/kvm-interrupt-injection]]（直接中断注入机制）
+- vDPA热迁移 → [[summaries/kvm-live-migration]]（virtio标准状态迁移）
+
+**索引更新**：
+- 更新wiki/index.md
+- 统计更新：Sources 62, Summaries 35, Concepts 22
+
+## [2026-05-13] ingest | 新增资料全量更新
+
+**新增摘要（4篇）**：
+- summaries/tcpdump-tool.md（tcpdump网络抓包分析：过滤表达式、参数详解）
+- summaries/kubernetes-core-concepts.md（Kubernetes核心概念与架构：Pod/Service/Deployment）
+- summaries/linux-boot-process.md（Linux启动详细过程：BIOS→MBR→GRUB→内核→init十步流程）
+
+**新增概念（1篇）**：
+- concepts/kubernetes.md（Kubernetes：容器编排平台核心概念）
+
+**更新摘要**：
+- summaries/device-passthrough.md：源文件名变更（设备直通 iommu+sriov、vfio+vdpa.md → 设备直通 iommu+sriov、vfio.md）
+
+**知识图谱关联**：
+- Kubernetes → [[summaries/containerd-runtime]]（容器运行时）
+- Kubernetes → [[concepts/cri]]（CRI接口）
+- Kubernetes → [[concepts/namespace]] + [[concepts/cgroups]]（底层隔离机制）
+- Linux启动 → [[summaries/linux-scheduler]]（init进程PID=1）
+- tcpdump → [[summaries/network-tools]]（网络工具）
+
+**索引更新**：
+- 更新wiki/index.md，新增Kubernetes分类、Linux系统启动分类
+- 统计更新：Sources 65, Summaries 38, Concepts 23
+- Source: `raw/sources/Kunbernetes和Docker/Kubernetes（K8s）全面解析：核心概念、架构与实践.md`
+- Source: `raw/sources/Linux操作系统/Linux系统启动/Linux启动详细过程（开机启动顺序）.md`
+- Source: `raw/sources/DFX工具/==网络==/网络分析工具tcpdump.md`
+
+## [2026-05-13] ingest | Linux关机流程与目录调整
+
+**新增摘要（1篇）**：
+- summaries/linux-shutdown-process.md（Linux关机流程深度解析：进程终止→文件系统卸载→ACPI断电）
+
+**更新摘要（目录变化）**：
+- summaries/linux-boot-process.md：源目录变化（Linux系统启动 → Linux系统启动关闭）
+
+**知识图谱关联**：
+- Linux关机 → [[summaries/linux-boot-process]]（启动与关机对称流程）
+- Linux关机 → [[concepts/cgroups]]（systemd使用cgroups批量终止）
+- Linux关机 → [[concepts/namespace]]（容器关机协调命名空间）
+
+**索引更新**：
+- 更新wiki/index.md
+- 统计更新：Sources 66, Summaries 39, Concepts 23
+- Source: `raw/sources/Linux操作系统/Linux系统启动关闭/Linux关机流程深度解析：从内核机制到硬件控制的完整理论框架.md`

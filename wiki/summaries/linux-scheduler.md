@@ -1,9 +1,10 @@
 ---
 title: Linux 进程调度器
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-13
 tags: [Linux, 进程调度, CFS, vruntime]
-sources: [Linux操作系统/Linux进程调度]
+source_dir: Linux操作系统/Linux进程调度
+source_files: [Linux 进程调度器.md, Linux 进程调度策略.md]
 ---
 
 # Linux 进程调度器

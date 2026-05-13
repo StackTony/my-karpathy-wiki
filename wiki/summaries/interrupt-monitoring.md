@@ -1,9 +1,10 @@
 ---
 title: 中断监控工具
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [中断, interrupts, IRQ, DFX]
-sources: [DFX工具/==中断==]
+source_dir: DFX工具/==中断==
+source_files: [中断数变化实时观测脚本.md]
 ---
 
 # 中断监控工具

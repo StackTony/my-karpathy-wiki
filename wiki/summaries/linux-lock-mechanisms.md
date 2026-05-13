@@ -1,9 +1,10 @@
 ---
 title: Linux 内核锁机制全景
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [lock, kernel, sync, spinlock, mutex, rcu]
-sources: [Linux 锁机制全景介绍, Linux SpinLock锁, Linux Mutex锁, Linux RCU锁]
+source_dir: Linux操作系统/Linux锁机制
+source_files: [Linux 锁机制全景介绍.md, Linux SpinLock锁.md, Linux Mutex锁.md, Linux RCU锁.md]
 ---
 
 ## 概述

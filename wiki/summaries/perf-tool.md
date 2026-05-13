@@ -1,9 +1,10 @@
 ---
 title: perf 工具详解
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [perf, CPU, 性能分析, DFX]
-sources: [DFX工具/==CPU==, DFX工具/==设置trace点==]
+source_dir: DFX工具
+source_files: [==CPU==/perf工具分析虚拟机的性能事件.md, ==CPU==/perf工具抓取CPU使用率情况.md, ==CPU==/perf工具抓取单核CPU的进程调度轨迹.md, ==设置trace点==/2 perf工具.md]
 ---
 
 # perf 工具详解

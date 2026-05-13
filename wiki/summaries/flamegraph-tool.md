@@ -1,9 +1,10 @@
 ---
 title: 火焰图工具
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [火焰图, perf, CPU, 性能分析, DFX]
-sources: [DFX工具/==设置trace点==]
+source_dir: DFX工具/==设置trace点==
+source_files: [3 火焰图.md]
 ---
 
 # 火焰图工具

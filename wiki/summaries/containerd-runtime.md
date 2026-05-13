@@ -1,9 +1,10 @@
 ---
 title: Containerd 容器运行时
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-13
 tags: [容器, containerd, docker, Kubernetes, CRI, OCI]
-sources: [Kunbernetes和Docker]
+source_dir: Kunbernetes和Docker
+source_files: [容器运行时 containerd.md]
 ---
 
 # Containerd 容器运行时
@@ -163,3 +164,6 @@ ctr -n k8s.io container ls
 - [[concepts/containerd]]
 - [[concepts/cri]]
 - [[concepts/oci]]
+- [[concepts/namespace]] - 资源隔离技术
+- [[concepts/cgroups]] - 资源限制技术
+- [[summaries/linux-namespace-cgroups]] - Namespace与Cgroups详解

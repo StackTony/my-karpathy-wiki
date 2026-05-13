@@ -1,9 +1,10 @@
 ---
 title: Linux IO 调度算法
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [IO, 调度算法, scheduler, Linux]
-sources: [Linux操作系统/Linux IO机制]
+source_dir: Linux操作系统/Linux IO机制
+source_files: [Linux IO调度算法.md]
 ---
 
 # Linux IO 调度算法

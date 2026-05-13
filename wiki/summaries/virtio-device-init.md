@@ -1,9 +1,10 @@
 ---
 title: Virtio 设备初始化流程
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-13
 tags: [virtio, 设备初始化, qemu]
-sources: [Linux虚拟化/IO虚拟化]
+source_dir: Linux虚拟化/IO虚拟化
+source_files: [1）设备初始化流程.md]
 ---
 
 # Virtio 设备初始化流程

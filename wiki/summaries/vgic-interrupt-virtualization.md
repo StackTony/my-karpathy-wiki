@@ -1,9 +1,10 @@
 ---
 title: VGIC 中断虚拟化
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-13
 tags: [vgic, 中断虚拟化, GIC, ARM]
-sources: [Linux虚拟化/中断虚拟化]
+source_dir: Linux虚拟化/中断虚拟化
+source_files: [vgic中断虚拟化介绍.md]
 ---
 
 # VGIC 中断虚拟化

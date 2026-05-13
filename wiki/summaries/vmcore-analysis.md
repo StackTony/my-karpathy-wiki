@@ -1,9 +1,10 @@
 ---
 title: vmcore 解析指南
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [vmcore, crash, 内核调试, DFX]
-sources: [DFX工具/==vmcore解析==]
+source_dir: DFX工具/==vmcore解析==
+source_files: [vmcore解析.md, 寄存器和地址分布.md, 开源crash网站.md, 调度sched.md, 进程结构task_struct和mm_struct.md]
 ---
 
 # vmcore 解析指南

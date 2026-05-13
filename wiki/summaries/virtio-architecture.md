@@ -1,9 +1,10 @@
 ---
 title: Virtio 整体架构
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [virtio, 虚拟化, IO, KVM]
-sources: [Linux虚拟化/IO虚拟化]
+source_dir: Linux虚拟化/IO虚拟化
+source_files: [virtio整体介绍.md]
 ---
 
 # Virtio 整体架构

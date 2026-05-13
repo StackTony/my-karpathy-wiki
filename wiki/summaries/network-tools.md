@@ -1,9 +1,10 @@
 ---
 title: 网络性能工具
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [网络, iperf, 带宽, DFX]
-sources: [DFX工具/==网络==]
+source_dir: DFX工具/==网络==
+source_files: [iperf打流.md]
 ---
 
 # 网络性能工具

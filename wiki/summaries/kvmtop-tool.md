@@ -1,9 +1,10 @@
 ---
 title: kvmtop 虚拟机监控工具
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [kvmtop, KVM, 虚拟化, EXT, DFX]
-sources: [DFX工具/==CPU==]
+source_dir: DFX工具/==CPU==
+source_files: [kvmtop的 EXT 各项的理解.md, 分析虚拟机的%ST抢占.md, 查看当前某些CPU上跑的哪些进程.md, 获取qemu所有处于D状态的vcpu和线程.md]
 ---
 
 # kvmtop 虚拟机监控工具

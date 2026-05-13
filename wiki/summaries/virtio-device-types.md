@@ -1,9 +1,10 @@
 ---
 title: Virtio 设备类型
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [virtio, virtio-blk, virtio-scsi, virtio-net]
-sources: [Linux虚拟化/IO虚拟化]
+source_dir: Linux虚拟化/IO虚拟化
+source_files: [virtio-blk和virtio-scsi的理解.md]
 ---
 
 # Virtio 设备类型

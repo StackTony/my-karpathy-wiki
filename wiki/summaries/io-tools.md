@@ -1,9 +1,10 @@
 ---
 title: IO 性能分析工具
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [iostat, fio, IO, 性能分析, DFX]
-sources: [DFX工具/==IO==]
+source_dir: DFX工具/==IO==
+source_files: [IO常用工具.md]
 ---
 
 # IO 性能分析工具

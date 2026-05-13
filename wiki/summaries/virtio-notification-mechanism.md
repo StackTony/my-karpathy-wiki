@@ -1,9 +1,10 @@
 ---
 title: Virtio 消息通知机制
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [virtio, ioeventfd, irqfd, 中断注入, KVM]
-sources: [Linux虚拟化/IO虚拟化/2）消息通知机制]
+source_dir: Linux虚拟化/IO虚拟化
+source_files: [2）消息通知机制（ioeventfd和irqfd）.md]
 ---
 
 # Virtio 消息通知机制

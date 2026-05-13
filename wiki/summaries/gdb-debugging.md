@@ -1,9 +1,10 @@
 ---
 title: GDB 调试指南
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [GDB, 调试, QEMU, DFX]
-sources: [DFX工具/==gdb调试==]
+source_dir: DFX工具/==gdb调试==
+source_files: [gdb常用命令.md, gdb调试qemu初始化流程.md]
 ---
 
 # GDB 调试指南

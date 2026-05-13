@@ -1,9 +1,10 @@
 ---
 title: Linux 网络协议栈
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [network, 网络, kernel, tcp, udp]
-sources: [Linux 网络协议栈]
+source_dir: Linux操作系统/Linux网络
+source_files: [Linux 网络协议栈.md]
 ---
 
 ## 概述

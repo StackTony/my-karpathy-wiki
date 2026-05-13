@@ -1,9 +1,10 @@
 ---
 title: 设备直通 IOMMU/SRIOV/VFIO/vDPA
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-13
 tags: [iommu, vfio, sriov, vdpa, 设备直通]
-sources: [Linux虚拟化/IO虚拟化]
+source_dir: Linux虚拟化/IO虚拟化
+source_files: [设备直通 iommu+sriov、vfio.md]
 ---
 
 # 设备直通机制
@@ -74,3 +75,4 @@ VFIO框架:
 
 - [[summaries/virtio-architecture]]
 - [[summaries/virtio-device-types]]
+- [[summaries/vdpa-interrupt-datapath]] - vDPA中断与数据面详解

@@ -1,9 +1,10 @@
 ---
 title: 内存分析工具
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [内存, numastat, slab, DFX]
-sources: [DFX工具/==内存==]
+source_dir: DFX工具/==内存==
+source_files: [perf工具分析slab内存占用.md, 各node上进程内存（含qemu）占用情况.md, 查看虚拟机OS预占的内存情况.md]
 ---
 
 # 内存分析工具

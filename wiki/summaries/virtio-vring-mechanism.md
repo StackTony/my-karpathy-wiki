@@ -1,9 +1,10 @@
 ---
 title: Virtio Vring 数据共享机制
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [virtio, vring, 共享内存, 数据传输]
-sources: [Linux虚拟化/IO虚拟化/3）数据共享机制]
+source_dir: Linux虚拟化/IO虚拟化
+source_files: [3）数据共享机制（vring环）.md]
 ---
 
 # Virtio Vring 数据共享机制

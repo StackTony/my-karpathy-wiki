@@ -1,9 +1,10 @@
 ---
 title: Linux IO机制全景
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 tags: [io, storage, kernel, block, scsi]
-sources: [Linux IO全景介绍, Linux IO调度算法]
+source_dir: Linux操作系统/Linux IO机制
+source_files: [Linux IO全景介绍.md]
 ---
 
 ## 概述

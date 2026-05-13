@@ -1,9 +1,10 @@
 ---
 title: KVM 热迁移机制
 created: 2026-05-11
-updated: 2026-05-12
+updated: 2026-05-13
 tags: [KVM, 热迁移, libvirt, 虚拟化]
-sources: [Linux虚拟化/热迁移]
+source_dir: Linux虚拟化/热迁移
+source_files: [热迁移流程.md, 热迁移命令.md]
 ---
 
 # KVM 热迁移机制

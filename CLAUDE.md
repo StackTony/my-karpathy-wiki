@@ -40,9 +40,38 @@ title: Page Title
 created: 2026-05-02
 updated: 2026-05-02
 tags: [tag1, tag2]
-sources: [source-id]
+source_dir: 目录路径
+source_files: [文件1.md, 文件2.md]
 ---
 ```
+
+### Sources 格式规范
+
+采用 **目录 + 文件分离** 格式，精确追溯知识来源：
+
+| 字段 | 说明 | 格式要求 |
+|------|------|----------|
+| `source_dir` | 来源目录（主题领域） | 不带 `raw/sources/` 前缀，不带文件名 |
+| `source_files` | 具体文件列表 | 带 `.md` 后缀，相对于 `raw/sources/<source_dir>/` |
+
+**示例**：
+```yaml
+# 单文件来源
+source_dir: 数据结构与算法/树
+source_files: [红黑树详解.md]
+
+# 多文件整合
+source_dir: Linux操作系统/Linux锁机制
+source_files: [Linux 锁机制全景介绍.md, Linux SpinLock锁.md, Linux Mutex锁.md, Linux RCU锁.md]
+
+# 跨目录整合（特殊情况）
+source_dir: DFX工具
+source_files: [==CPU==/perf工具分析虚拟机的性能事件.md, ==设置trace点==/perf工具.md]
+```
+
+**设计意义**：
+- `source_dir`：主题领域一目了然，便于分类索引
+- `source_files`：精确追溯每个来源文件，便于更新维护
 
 ### Cross-References
 - Use wiki-links: `[[entities/entity-name]]`
