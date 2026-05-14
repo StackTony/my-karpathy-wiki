@@ -256,3 +256,206 @@ source_files: [红黑树详解.md]
 - 更新wiki/index.md
 - 统计更新：Sources 66, Summaries 39, Concepts 23
 - Source: `raw/sources/Linux操作系统/Linux系统启动关闭/Linux关机流程深度解析：从内核机制到硬件控制的完整理论框架.md`
+
+## [2026-05-13] ingest | AI人工智能系列文档
+
+**新增领域**：AI人工智能（全新领域）
+
+**新增摘要（3篇）**：
+- summaries/langchain-architecture.md（LangChain设计原理：Runnable/LCEL/Agent/RAG/LangGraph十四篇章）
+- summaries/ai-agent-overview.md（AI Agent智能体概述：自主决策、工具调用、ReAct循环）
+- summaries/prompt-engineering.md（Prompt提示词工程：角色定义、任务拆解、模板系统）
+
+**新增概念（8篇）**：
+- concepts/langchain.md（LangChain框架：LLM应用开发，Runnable统一抽象）
+- concepts/ai-agent.md（AI Agent智能体：自主决策、ReAct模式、工具调用）
+- concepts/rag.md（RAG检索增强生成：检索+生成，VectorStore/Retriever）
+- concepts/lcel.md（LCEL表达式语言：`|`运算符链式组合Runnable）
+- concepts/langgraph.md（LangGraph：图式Agent工作流，StateGraph/DAG/Checkpoint）
+- concepts/prompt-engineering.md（Prompt工程：提示词设计、Few-shot、Chain-of-Thought）
+- concepts/ai-skills.md（AI Skills技能库：Agent可调用的技能模块）
+- concepts/transformer.md（Transformer：现代LLM基础架构，Self-Attention）
+
+**知识图谱关联**：
+- LangChain → Agent → ReAct → Tool → Skills
+- LangChain → RAG → VectorStore → Retriever
+- LangChain → LangGraph → StateGraph → Checkpoint
+- Transformer → LLM → LangChain → Agent
+
+**索引更新**：
+- 更新wiki/index.md，新增AI人工智能分类
+- 统计更新：Sources 74, Summaries 42, Concepts 31
+- Source: `raw/sources/AI人工智能/`（含Agent架构、Prompt+RAG、Skills、大模型子目录）
+- Note: `install.ps1` 为安装脚本，非知识内容，未创建摘要
+
+## [2026-05-14] config | 定时任务配置：学习推荐系统
+
+**新增定时任务（2个）**：
+
+| 任务ID | 时间 | 功能 |
+|--------|------|------|
+| 3d32447c | 每天 20:03 | 分析知识图谱 + 联网搜索技术博客 + 生成学习推荐报告 |
+| 6a7fefdd | 每天 09:07 | 读取昨天的推荐报告并展示给用户 |
+
+**工作流程**：
+```
+20:03 晚上 → 分析wiki → 联网搜索 → 整理报告 → wiki/recommendations/日期.md
+09:07早上 → 读取报告 → 总结展示 → 用户查看
+```
+
+**搜索配置更新**：
+- 搜索来源不限于CSDN/知乎，扩展到掘金、博客园、GitHub、官方文档等
+- 推荐格式优化：标题 + 链接 + 摘要 + 重点内容（移除来源和项目字段）
+
+**新增目录**：
+- wiki/recommendations/（存放每日学习推荐报告）
+
+**更新报告格式**：
+- wiki/recommendations/2026-05-14.md 已更新为新格式
+
+## [2026-05-14] update | 学习推荐任务优化：优先读取用户指定主题
+
+**任务更新**：
+- 删除旧任务 3d32447c
+- 创建新任务 6f26a0f8
+
+**新增功能**：
+- 新增 `wiki/recommendations/Day learn.md` 文件用于用户指定学习主题
+- 定时任务优先读取 Day learn.md，根据用户指定主题进行定向推荐
+- 如果 Day learn.md 为空，则自动分析知识图谱进行推荐
+
+**工作流程**：
+```
+20:03 晚上 → 读取 Day learn.md → 检查用户指定主题
+                ↓                    ↓
+           有主题 → 针定搜索推荐    无主题 → 自动分析推荐
+                ↓                    ↓
+           联网搜索 → 整理报告 → wiki/recommendations/日期.md
+```
+
+**文件用途**：
+- `Day learn.md`：用户填写想要学习/了解的主题（如"epoll原理"、"图算法"等）
+- `日期.md`：每日生成的学习推荐报告
+
+**新增定时任务（2个）**：
+
+| 任务ID | 时间 | 功能 |
+|--------|------|------|
+| d83f20f6 | 每天 20:03 | 分析知识图谱 + 联网搜索CSDN/知乎博客 + 生成学习推荐报告 |
+| 6a7fefdd | 每天 09:07 | 读取昨天的推荐报告并展示给用户 |
+
+**工作流程**：
+```
+20:03 晚上 → 分析wiki → 联网搜索 → 整理报告 → wiki/recommendations/日期.md
+09:07早上 → 读取报告 → 总结展示 → 用户查看
+```
+
+**新增目录**：
+- wiki/recommendations/（存放每日学习推荐报告）
+
+## [2026-05-14] check | AI 人工智能目录处理确认
+
+本次检查 `raw/sources/AI 人工智能/` 目录，确认所有源文件已处理完成：
+
+**已处理源文件**：
+- Agent架构/LangChain/LangChain 架构.md → [[summaries/langchain-architecture]]
+- Agent架构/LangChain/LangChain 解决的核心问题.md → [[summaries/langchain-architecture]]
+- Agent架构/Agent 智能体.md → [[summaries/ai-agent-overview]] + [[concepts/ai-agent]]
+- Agent架构/Claude Code 安装.md → [[summaries/ai-agent-overview]]
+- Prompt + RAG/Prompt 提示词.md → [[summaries/prompt-engineering]] + [[concepts/prompt-engineering]]
+- 大模型/Transformer模型.md → [[concepts/transformer]]
+- Skills/my-skills.md → [[concepts/ai-skills]]
+- Skills/开源skills库.md → [[concepts/ai-skills]]
+
+**新增 Concepts**：
+- [[concepts/langchain]] - LangChain 框架
+- [[concepts/ai-agent]] - Agent 智能体
+- [[concepts/rag]] - RAG 检索增强生成
+- [[concepts/lcel]] - LCEL 表达式语言
+- [[concepts/langgraph]] - LangGraph 图式工作流
+- [[concepts/prompt-engineering]] - Prompt 工程
+- [[concepts/ai-skills]] - AI Skills 技能库
+- [[concepts/transformer]] - Transformer 模型
+
+**结论**：本次检查确认 AI 人工智能目录处理完毕，无需新增摘要或概念页面。
+
+## [2026-05-14] update | 定时任务续期与学习推荐格式更新
+
+**定时任务续期**：
+- dc3418d5（每3天23:00）：检查 raw/sources 变化 → Ingest 工作流
+- 17da5465（每天09:00）：推送昨天学习推荐报告
+- 409c0aeb（每天20:00）：生成学习推荐（含已有知识总结 + 深入推荐）
+
+**学习推荐格式优化**：
+- 博客链接改为表格格式：`[来源名](URL)` 可直接点击
+- 新增"已有知识总结"章节：若主题已存在于 wiki，先总结再深入推荐
+
+## [2026-05-14] download | 推荐博客下载保存
+
+根据 [[Day learn]] 新增要求，使用 Defuddle CLI 将推荐博客下载保存到 `raw/sources/Self learn/` 目录。
+
+**已下载博客（6篇）**：
+- AI infra-Rack2Cloud-GPU Fabric架构.md（Rack2Cloud，技术分析）
+- AI infra-vCluster-AI Factory架构.md（vCluster，技术分析）
+- 多agent编排-腾讯云-MultiAgent协作系统.md（腾讯云，原理介绍）
+- 多agent编排-Comet-Agent架构模式.md（Comet，技术分析）
+- K8s云原生-阿里云-K8S技术原理.md（阿里云，原理介绍）
+- K8s云原生-官方文档-K8s架构.md（Kubernetes官方，原理介绍）
+
+**下载工具**：Defuddle CLI（`defuddle parse URL --md -o filename`）
+
+**新增目录**：
+- `raw/sources/Self learn/`（存放自学习博客源文件）
+
+**下一步**：定时任务会自动检测并执行 Ingest 工作流，生成摘要和概念页面。
+
+## [2026-05-14] recommend | Harness 持续交付平台学习推荐
+
+根据 [[Day learn]] 指定主题，执行学习推荐任务。
+
+**用户指定主题**：Harness（博客类别：原理介绍、技术分析）
+
+**知识库状态**：暂无 Harness 相关内容，从零推荐
+
+**推荐博客（6篇）**：
+- Harness-美股之家-持续交付平台介绍（原理介绍）
+- Harness-掘金-开源CI/CD系统全解析（技术分析）
+- Harness-腾讯云-持续交付平台体验（原理介绍）
+- Harness-Broadcom-GitOps架构详解（技术分析）
+- Harness-Google Cloud-RAG应用CI/CD（技术分析）
+- Harness官方-Pipeline设计指南（技术分析）
+
+**已下载博客（2篇）**：
+- `raw/sources/Self learn/Harness-掘金-开源CI CD系统全解析.md`
+- `raw/sources/Self learn/Harness-腾讯云-持续交付平台体验.md`
+
+**推荐报告**：`wiki/recommendations/2026-05-14-Harness.md`
+
+**知识图谱建议**：建议创建 `concepts/ci-cd.md`、`concepts/gitops.md`、`concepts/harness.md`
+
+## [2026-05-14] lint | Wiki 健康检查
+
+执行 Wiki 健康检查，检查断链、孤立页面、索引一致性。
+
+**检查结果**：
+
+### 断链问题（3个）
+- [[summaries/dfx-tools-overview]] 引用 `[[summaries/bpftrace-tool]]`（不存在）
+- [[concepts/lcel]] 引用 `[[concepts/runnable]]`（不存在）
+- [[recommendations/2026-05-14]] 引用 `[[Day learn]]`（应为 `[[recommendations/Day learn]]`）
+
+### 孤立页面（6个）
+- [[concepts/task-struct]] 仅在 index.md 出现
+- [[concepts/registers-analysis]] 仅在 index.md 出现
+- [[summaries/virtio-net-forwarding]] 仅在 index.md 出现
+- [[summaries/virtio-device-init]] 仅在 index.md 出现
+- [[summaries/vgic-interrupt-virtualization]] 仅在 index.md 出现
+- [[summaries/tcpdump-tool]] 仅在 index.md 出现
+
+### 统计核实
+- ✓ Summaries: 42 个（41 高可信度 + 1 Wiki生成）
+- ✓ Concepts: 31 个
+- ✓ 原始文档: 81 个（71 高可信度 + 10 低可信度）
+
+**更新**：
+- 更新 wiki/index.md，新增健康检查报告章节
