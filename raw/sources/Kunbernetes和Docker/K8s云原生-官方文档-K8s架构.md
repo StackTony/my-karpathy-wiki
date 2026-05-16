@@ -4,7 +4,7 @@ Kubernetes 集群由一个控制平面和一组用于运行容器化应用的工
 
 本文概述了构建一个完整且可运行的 Kubernetes 集群所需的各种组件。
 
-![控制平面（kube-apiserver、etcd、kube-controller-manager、kube-scheduler）和多个节点。每个节点运行 kubelet 和 kube-proxy。](https://kubernetes.io/images/docs/kubernetes-cluster-architecture.svg)
+![[kubernetes-cluster-architecture.svg|控制平面（kube-apiserver、etcd、kube-controller-manager、kube-scheduler）和多个节点。每个节点运行 kubelet 和 kube-proxy。]]
 
 图 1. Kubernetes 集群组件。
 
@@ -185,5 +185,3 @@ Kubernetes 架构的灵活性使各组织能够根据特定需求调整其集群
 - Kubernetes 中的几个 [容器运行时](https://kubernetes.io/zh-cn/docs/setup/production-environment/container-runtimes/) 。
 - 使用 [cloud-controller-manager](https://kubernetes.io/zh-cn/docs/concepts/architecture/cloud-controller/) 与云平台集成。
 - [kubectl](https://kubernetes.io/zh-cn/docs/reference/generated/kubectl/kubectl-commands) 命令。
-
-最后修改 April 06, 2026 at 9:34 PM PST: [\[zh-cn\]sync architecture/\_index (3b9cad864a)](https://github.com/kubernetes/website/commit/3b9cad864a464052e4467df76ca78e82d8a2343c)
