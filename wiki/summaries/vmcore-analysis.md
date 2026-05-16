@@ -164,3 +164,5 @@ mm_struct → pgd → pmd → pte → 物理页框
 - [[summaries/gdb-debugging]]
 - [[summaries/dfx-tools-overview]]
 - [[concepts/linux-spinlock]]（mutex crash 解析）
+- [[concepts/registers-analysis]] - 寄存器分析技术
+- [[concepts/task-struct]] - 进程结构体

@@ -232,5 +232,5 @@ def update_user_info(tool_call_id: Annotated[str, InjectedToolCallId]) -> Comman
 ## 相关链接
 
 - [[concepts/agent-memory]] - Agent 记忆核心概念
-- [[summaries/rag-production-practice]] - RAG 可观测性与评估
+- [[summaries/langchain-architecture]] - LangChain 记忆系统设计
 - [[summaries/agent-long-task-production]] - 长期任务状态恢复

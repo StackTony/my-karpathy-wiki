@@ -12,6 +12,9 @@ kprobe使用指南：[https://blog.csdn.net/luckyapple1028/article/details/52972
 cat /sys/kernel/debug/tracing/available_filter_functions
 ===不支持的可能会echo失败===
 
+echo "test \`date\` " > /dev/kmsg 
+该命令可以将时间戳换成tracing里一样的
+
 1）添加kprobe事件追踪要关注的函数
 echo 'p:my_probe queue_work' > /sys/kernel/debug/tracing/kprobe_events
 2）开启kprobe

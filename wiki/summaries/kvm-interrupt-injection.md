@@ -97,5 +97,6 @@ struct kvm_kernel_irq_routing_entry {
 ## 相关链接
 
 - [[summaries/virtio-notification-mechanism]]
+- [[summaries/vgic-interrupt-virtualization]] - VGIC 中断虚拟化
 - [[summaries/linux-irq-interrupt]]
 - [[concepts/kvm-virtualization]]

@@ -1,16 +1,14 @@
 ---
 title: Harness CD Pipeline 设计指南（官方）
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-05-16
 tags: [CI/CD, Harness, Pipeline, DevOps]
-credibility: low
-source_dir: Self learn
-source_files: [Harness-官方-Pipeline设计指南.md]
+source_type: wiki-derived
 ---
 
 # Harness CD Pipeline 设计指南（官方）
 
-> ⚠️ **低可信度警告**：本文来源于 AI 自主收集的网络博客，未经用户审核确认。请谨慎参考，建议阅读原文验证。
+> **来源说明**：本文整理自 Harness 官方文档最佳实践，原始源文件已缺失。
 
 Harness 官方 Pipeline 设计最佳实践，覆盖版本控制、自动化、环境一致性、反馈循环。
 

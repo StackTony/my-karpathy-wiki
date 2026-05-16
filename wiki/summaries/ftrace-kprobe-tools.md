@@ -139,3 +139,4 @@ echo > $tracepath/trace
 
 - [[summaries/perf-tool]]
 - [[summaries/dfx-tools-overview]]
+- [[concepts/bpftrace]] - eBPF 高级动态追踪

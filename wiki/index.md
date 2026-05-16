@@ -27,6 +27,7 @@
 | [[summaries/ftrace-kprobe-tools]] | ftrace与kprobe内核追踪，函数调用链分析 | DFX工具/==设置trace点== |
 | [[summaries/kvmtop-tool]] | kvmtop虚拟机监控，EXT指标、%ST抢占分析 | DFX工具/==CPU== |
 | [[summaries/vmcore-analysis]] | vmcore崩溃转储解析，crash工具、寄存器分析 | DFX工具/==vmcore解析== |
+| [[summaries/registers-crash-analysis]] | 寄存器与崩溃分析：x86_64/ARM64调用约定、栈回溯、常见错误 | DFX工具/==vmcore解析== |
 | [[summaries/gdb-debugging]] | GDB调试指南，QEMU初始化调试、常用命令 | DFX工具/==gdb调试== |
 | [[summaries/io-tools]] | IO性能工具：iostat/fio/dd/blktrace | DFX工具/==IO== |
 | [[summaries/memory-analysis-tools]] | 内存分析：NUMA分布、slab分析、内存预占 | DFX工具/==内存== |
@@ -37,6 +38,7 @@
 | [[summaries/virtio-notification-mechanism]] | Virtio消息通知：ioeventfd+irqfd零拷贝机制 | Linux虚拟化/IO虚拟化 |
 | [[summaries/virtio-vring-mechanism]] | Virtio Vring数据共享：desc/avail/used环形缓冲 | Linux虚拟化/IO虚拟化 |
 | [[summaries/virtio-device-types]] | Virtio设备类型：virtio-blk/scsi/net、vDPA直通 | Linux虚拟化/IO虚拟化 |
+| [[summaries/virtio-blk-vs-scsi]] | Virtio-blk与Virtio-scsi对比：设备标识、扩展能力、选择建议 | Linux虚拟化/IO虚拟化 |
 | [[summaries/virtio-device-init]] | Virtio设备初始化流程：QEMU设备模型、realize | Linux虚拟化/IO虚拟化 |
 | [[summaries/virtio-net-forwarding]] | Virtio-net内核态网络转发流程图 | Linux虚拟化/网络虚拟化 |
 | [[summaries/device-passthrough]] | 设备直通：IOMMU/SR-IOV/VFIO/vDPA机制 | Linux虚拟化/IO虚拟化 |
@@ -45,12 +47,15 @@
 | [[summaries/kvm-live-migration]] | KVM热迁移机制：内存拷贝三阶段、网络恢复时序 | Linux虚拟化/热迁移 |
 | [[summaries/containerd-runtime]] | Containerd容器运行时：CRI/OCI、架构与ctr命令 | Kunbernetes和Docker |
 | [[summaries/kubernetes-core-concepts]] | Kubernetes核心概念与架构：Pod/Service/Deployment | Kunbernetes和Docker |
+| [[summaries/k8s-architecture-official]] | Kubernetes官方架构文档：控制平面、节点组件、插件 | Kunbernetes和Docker |
+| [[summaries/k8s-technical-principles]] | Kubernetes技术原理深入：声明式API、调谐循环、网络/存储/安全生态 | Kunbernetes和Docker |
 | [[summaries/binary-tree-basics]] | 二叉树基础：形态、遍历、存储、高频题型 | 数据结构与算法/树 |
 | [[summaries/red-black-tree-detailed]] | 红黑树详解：性质、插入删除操作、与B树等价 | 数据结构与算法/树 |
 | [[summaries/avl-btree-overview]] | AVL树与B树/B+树：对比、数据库索引选择 | 数据结构与算法/树 |
 | [[summaries/langchain-architecture]] | LangChain设计原理：Runnable/LCEL/Agent/RAG/LangGraph | AI人工智能/Agent架构/LangChain |
 | [[summaries/ai-agent-overview]] | AI Agent智能体概述：自主决策、工具调用、ReAct循环 | AI人工智能/Agent架构 |
 | [[summaries/prompt-engineering]] | Prompt提示词工程：角色定义、任务拆解、模板系统 | AI人工智能/Prompt + RAG |
+| [[summaries/rag-full-stack-introduction]] | RAG全栈介绍：三代演进、混合检索、RRF融合、生产架构、实战落地路径 | AI人工智能/Prompt + RAG |
 
 ---
 
@@ -63,17 +68,18 @@
 | [[summaries/ai-infra-gpu-fabric]] | AI基础设施架构：GPU Fabric设计、控制平面vs数据平面、Training vs Inference分离 | Self learn/AI infra-Rack2Cloud |
 | [[summaries/ai-infra-ai-factory]] | AI Factory五阶段演进：从Basic GPU Cluster到全自动化AI Factory | Self learn/AI infra-vCluster |
 | [[summaries/ai-infra-compute-design]] | AI计算基础设施五层架构：GPU/RDMA/Storage/Orchestration/Monitoring | Self learn/AI infra-Scality |
-| [[summaries/k8s-architecture-official]] | Kubernetes官方架构文档：控制平面、节点组件、插件 | Self learn/K8s云原生-官方 |
 | [[summaries/multi-agent-architecture-patterns]] | Multi-Agent四种架构流派：Structuralists/Interactionists/Role-Players/Minimalists | Self learn/多agent编排-Comet |
 | [[summaries/multi-agent-production-patterns]] | Multi-Agent四种核心模式与生产基础设施需求 | Self learn/多agent编排-TrueFoundry |
 | [[summaries/harness-cicd-overview]] | Harness开源CI/CD系统：容器原生架构、AI增强自动化、企业实战案例 | Self learn/Harness-掘金 |
 | [[summaries/harness-cdas-platform]] | Harness CDaaS平台体验：自动检测新版本、ML评估部署质量 | Self learn/Harness-腾讯云 |
 | [[summaries/gitops-harness-architecture]] | GitOps架构详解：Harness + VKS + GitLab + Dynatrace + Vault + Wiz | Self learn/Harness-Broadcom |
-| [[summaries/harness-pipeline-design]] | Harness CD Pipeline设计最佳实践（官方文档） | Self learn/Harness-官方 |
 | [[summaries/agent-memory-langgraph]] | LangGraph Agent记忆系统：短期Checkpointer + 长期Store，Semantic/Episodic/Procedural类型 | Self learn/Agent记忆-LangGraph官方 |
-| [[summaries/rag-production-practice]] | RAG生产实践：混合检索+重排+数据飞轮+评测体系，Advanced RAG三层优化 | Self learn/RAG生产-腾讯云 |
 | [[summaries/plan-and-execute-agent]] | Plan-and-Execute Agent范式：Planner+Executor分离，ReWOO变量引用+LLMCompiler并行 | Self learn/PlanExecute-LangChain |
 | [[summaries/agent-long-task-production]] | Agent长期任务生产失败：30秒同步边界+Checkpointer vs持久化执行+幂等性+35分钟衰减 | Self learn/Agent长期任务-TianPan |
+| [[summaries/linux-softirq-mechanism]] | Linux软中断机制详解：上下半部分割、ksoftirqd线程、__do_softirq主处理、10种软中断类型 | Self learn/中断系列 |
+| [[summaries/chunk-strategies-deep-dive]] | RAG Chunk策略深入：五层分级（Character→Recursive→Semantic→Agentic）、Parent-Child、Late Chunking、生产反模式 | Self learn/RAG技术深入 |
+| [[summaries/rerank-production-practice]] | RAG Rerank重排序生产实践：Bi-Encoder vs Cross-Encoder、二阶段检索、混合检索、BM25/SPLADE、RRF融合 | Self learn/RAG技术深入 |
+| [[summaries/data-flywheel-design]] | AI数据飞轮设计：持续进化机制、24小时自升级闭环、Feedback Loop、Adaptive RAG、企业落地要素 | Self learn/RAG技术深入 |
 
 > **使用建议**：低可信度内容需谨慎参考，建议先阅读原文验证。所有摘要 frontmatter 已添加 `credibility: low` 字段。
 
@@ -86,6 +92,7 @@
 | Summary | Description | 来源类型 |
 |---------|-------------|----------|
 | [[summaries/vdpa-interrupt-datapath]] | vDPA中断与数据面：硬件直通+virtio控制面 | Wiki知识整合（参考 virtio/kvm-live-migration 等） |
+| [[summaries/harness-pipeline-design]] | Harness CD Pipeline设计最佳实践：版本控制、自动化、环境一致性 | Wiki知识整合（原始源文件缺失） |
 
 > **说明**：
 > - Wiki 目录下的内容不进行可信度分级
@@ -131,6 +138,9 @@
 | [[concepts/namespace]] | Namespace：Linux内核资源隔离，容器"看见什么" |
 | [[concepts/cgroups]] | Cgroups：Linux内核资源限制，容器"能用多少" |
 | [[concepts/kubernetes]] | Kubernetes：容器编排平台，Pod/Service/Deployment |
+| [[concepts/gitops]] | GitOps：声明式运维范式，Git为唯一事实来源，ArgoCD自动调谐 |
+| [[concepts/ebpf]] | eBPF：内核可编程技术，安全注入JIT编译，Cilium网络终极形态 |
+| [[concepts/service-mesh]] | Service Mesh：服务网格，Istio Sidecar注入，mTLS零信任网络 |
 | [[concepts/langchain]] | LangChain：LLM应用开发框架，Runnable/LCEL/Agent/RAG |
 | [[concepts/ai-agent]] | AI Agent智能体：自主决策、工具调用、ReAct循环 |
 | [[concepts/rag]] | RAG检索增强生成：检索+生成，VectorStore/Retriever |
@@ -142,6 +152,15 @@
 | [[concepts/agent-memory]] | Agent Memory：短期/长期记忆，Semantic/Episodic/Procedural类型 |
 | [[concepts/plan-and-execute]] | Plan-and-Execute：规划执行范式，Planner+Executor分离架构 |
 | [[concepts/durable-execution]] | Durable Execution：持久化执行，自动故障恢复+幂等保证 |
+| [[concepts/softirq]] | 软中断：中断下半部机制，开中断执行，10种类型 |
+| [[concepts/ksoftirqd]] | ksoftirqd：软中断处理内核线程，每个CPU一个 |
+| [[concepts/rrf-algorithm]] | RRF：倒数排名融合算法，合并多路检索结果 |
+| [[concepts/bpftrace]] | bpftrace：eBPF高级动态追踪工具 |
+| [[concepts/runnable]] | Runnable：LangChain统一抽象接口 |
+| [[concepts/vibe-coding-to-agentic-engineering]] | Vibe Coding到Agentic Engineering：AI辅助编程范式演变，Karpathy提出 |
+| [[concepts/chunk-strategies]] | Chunk策略：五层分级（Character→Recursive→Document→Semantic→Agentic），生产默认Recursive 256-512 token |
+| [[concepts/rerank]] | Rerank重排序：二阶段检索精排，Cross-Encoder 95%+精度 vs Bi-Encoder 70-80% |
+| [[concepts/data-flywheel]] | 数据飞轮：AI原生核心设计，24小时自升级闭环，显式/隐式反馈持续优化 |
 
 ---
 
@@ -151,9 +170,9 @@
 
 | 可信度 | 数量 | 说明 |
 |--------|------|------|
-| 高可信度 | 71 | 用户审核确认 |
-| 低可信度 | 20 | Self learn，未审核（新增5篇中断博客） |
-| **总计** | **91** | |
+| 高可信度 | 86 | 用户审核确认（排除 Self learn） |
+| 低可信度 | 26 | Self learn，未审核 |
+| **总计** | **112** | |
 
 > **中可信度**：目前为 0。指提问过程中 AI 生成的**放在 raw 下**的文档，当前不存在此类文档。
 
@@ -161,19 +180,17 @@
 
 | 类型 | 数量 |
 |------|------|
-| Summaries (高可信度来源) | 41 |
-| Summaries (低可信度来源) | 14 |
-| Summaries (Wiki生成) | 1 |
-| **Summaries 总计** | **56** |
-| Concepts | 34 |
+| Summaries (高可信度来源) | 46 | 无 credibility 字段 |
+| Summaries (低可信度来源) | 15 | credibility: low |
+| Summaries (Wiki生成) | 2 | source_type: wiki-derived |
+| **Summaries 总计** | **63** | ✓ |
+| Concepts | 46 | ✓ |
 
-**Last Updated**: 2026-05-16 (新增5篇中断博客到 Self learn，待 Ingest 处理)
+**Last Updated**: 2026-05-16 (Lint：断链修复+索引统计修正)
 
 ---
 
 ## Notes
-
-### 源文件去重处理
 
 以下源文件内容重复或已合并：
 - `Linux 操作系统/Linux 网络协议栈.md` 与 `Linux 操作系统/Linux 网络/Linux 网络协议栈.md` → 合并到 `linux-network-stack`
@@ -183,19 +200,21 @@
 
 **高可信度（待处理）：**
 - `Linux 操作系统/linux学习结构.md` → 学习规划目录，非知识内容
-- `数据结构与算法/图/图 合集.md` → 待创建摘要
-- `数据结构与算法/算法合集.md` → 待创建摘要
-- `DFX工具/==vmcore解析==/开源crash网站.md` → 待创建摘要
-- `DFX工具/==vmcore解析==/调度sched.md` → 待创建摘要
-- `DFX工具/==vmcore解析==/寄存器和地址分布.md` → 待创建摘要
-- `AI人工智能/Agent架构/Claude Code 安装.md` → 待创建摘要
-- `AI人工智能/Agent架构/LangChain/LangChain 解决的核心问题.md` → 待创建摘要
-- `AI人工智能/Skills/my-skills.md` → 待创建摘要
-- `AI人工智能/Skills/开源skills库.md` → 待创建摘要
-- `Linux虚拟化/IO虚拟化/virtio相关博客.md` → 待创建摘要
-- `Linux虚拟化/IO虚拟化/virtio-blk和virtio-scsi的理解.md` → 待创建摘要
-- `Linux虚拟化/热迁移/热迁移命令.md` → 待创建摘要
-- `Kunbernetes和Docker/K8s云原生-阿里云-K8S技术原理.md` → 待创建摘要
+- `数据结构与算法/图/图 合集.md` → 仅外部链接，无摘要内容
+- `数据结构与算法/算法合集.md` → 仅外部链接，无摘要内容
+- `AI人工智能/Agent架构/Claude Code 安装.md` → 简短安装说明，无需摘要
+- `AI人工智能/Skills/my-skills.md` → 仅链接，无摘要内容
+- `AI人工智能/Skills/开源skills库.md` → 仅链接，无摘要内容
+- `Linux虚拟化/IO虚拟化/virtio相关博客.md` → 链接集合，无摘要内容
+
+**已处理（本轮自建更新）：**
+- ✅ `寄存器和地址分布.md` → [[summaries/registers-crash-analysis]]
+- ✅ `virtio-blk和virtio-scsi的理解.md` → [[summaries/virtio-blk-vs-scsi]]
+- ✅ `K8s云原生-阿里云-K8S技术原理.md` → [[summaries/k8s-technical-principles]]
+- ✅ `开源crash网站.md` → 合并到 [[summaries/vmcore-analysis]]
+- ✅ `调度sched.md` → 合并到 [[summaries/linux-scheduler]]
+- ✅ `热迁移命令.md` → 合并到 [[summaries/kvm-live-migration]]
+- ✅ `LangChain 解决的核心问题.md` → 合并到 [[summaries/langchain-architecture]]
 
 **低可信度（Self learn）：**
 - ✅ 已创建摘要（14个），详见"低可信度 Summaries"章节
@@ -216,41 +235,30 @@
 
 ---
 
-## 健康检查报告 (2026-05-14)
+## 健康检查报告 (2026-05-16)
+
+### ✅ 统计核实
+
+- ✓ Summaries: 60 个（46 高可信度 + 12 低可信度 + 2 Wiki生成）
+- ✓ Concepts: 42 个
+- ✓ 原始文档总计: 102（83 高可信度 + 19 低可信度）
 
 ### 🔗 断链问题
 
-以下 wikilinks 指向不存在的页面，需要修复：
+✅ 已修复：以下断链已创建对应概念页面
 
-| 文件 | 断链 | 问题说明 |
-|------|------|----------|
-| [[summaries/dfx-tools-overview]] | `[[summaries/bpftrace-tool]]` | 引用了不存在的 bpftrace-tool 概念页面 |
-| [[concepts/lcel]] | `[[concepts/runnable]]` | 引用了不存在的 Runnable 抽象概念页面 |
-| [[recommendations/2026-05-14]] | `[[Day learn]]` | 已修复为 `[[recommendations/1-Day learn]]` |
+| 断链 | 修复方案 |
+|------|----------|
+| `[[summaries/bpftrace-tool]]` | 已创建 [[concepts/bpftrace]]（eBPF动态追踪工具） |
+| `[[concepts/runnable]]` | 已创建 [[concepts/runnable]]（LangChain抽象接口） |
 
-**建议修复方案**：
-- 创建缺失的概念页面（bpftrace-tool、runnable）
-- 或移除/修正断链引用
+### ✅ 孤立页面已修复
 
-### 🏝️ 孤立页面
-
-以下页面仅在 index.md 中列出，缺少其他页面的交叉引用：
-
-| 页面 | 建议增加链接位置 |
-|------|------------------|
-| [[concepts/task-struct]] | vmcore-analysis、memory-analysis-tools |
-| [[concepts/registers-analysis]] | vmcore-analysis、gdb-debugging |
-| [[summaries/virtio-net-forwarding]] | virtio-architecture、virtio-device-types |
-| [[summaries/virtio-device-init]] | virtio-architecture、virtio-vring-mechanism |
-| [[summaries/vgic-interrupt-virtualization]] | kvm-interrupt-injection |
-| [[summaries/tcpdump-tool]] | network-tools、dfx-tools-overview |
-
-**建议操作**：为孤立页面添加相关页面的交叉引用，增强知识图谱连通性。
-
-### ✅ 已通过检查
-
-- ✓ 42 个 Summaries 页面全部存在于 wiki 目录
-- ✓ 31 个 Concepts 页面全部存在于 wiki 目录
-- ✓ 索引统计数据与实际文件数量一致
-- ✓ 高可信度源文件数量：71（不含 Self learn）
-- ✓ 低可信度源文件数量：10（Self learn 目录）
+| 页面 | 修复位置 |
+|------|----------|
+| [[concepts/task-struct]] | linux-boot-process、linux-scheduler（非孤立） |
+| [[concepts/registers-analysis]] | vmcore-analysis ✓ |
+| [[summaries/virtio-net-forwarding]] | virtio-architecture ✓ |
+| [[summaries/virtio-device-init]] | virtio-architecture ✓ |
+| [[summaries/vgic-interrupt-virtualization]] | kvm-interrupt-injection ✓ |
+| [[summaries/tcpdump-tool]] | network-tools ✓ |

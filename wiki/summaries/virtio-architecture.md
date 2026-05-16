@@ -49,5 +49,8 @@ virtio-net/blk       共享内存环形缓冲        QEMU/vhost/vDPA
 - [[summaries/virtio-notification-mechanism]]
 - [[summaries/virtio-vring-mechanism]]
 - [[summaries/virtio-device-types]]
+- [[summaries/virtio-device-init]] - 设备初始化流程
+- [[summaries/virtio-net-forwarding]] - 内核态网络转发
 - [[concepts/kvm-virtualization]]
+- [[concepts/virtio]]
 - [[summaries/linux-irq-interrupt]]

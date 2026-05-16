@@ -64,4 +64,4 @@ chain.invoke({})  # 输出：Hello, LangChain!
 
 - [[summaries/langchain-architecture]] - LangChain LCEL 章节
 - [[concepts/langchain]] - LangChain 框架
-- **Runnable** - LCEL链式组合的基础抽象单元，详见 langchain-architecture
+- [[concepts/runnable]] - Runnable 抽象接口

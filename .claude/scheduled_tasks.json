@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "id": "91edd9eb",
+      "cron": "0 7 * * *",
+      "prompt": "请执行\"自学推荐\"任务，步骤如下：\n\n1. **检查学习主题文件**：读取 `wiki/recommendations/1-Day learn.md`\n   - 检查\"### 优先了解：\"章节下的内容\n   - 如果该章节为空或没有实质性内容（如只有标题没有具体主题），直接报告\"今日无学习主题，任务结束\"并退出\n\n2. **有指定主题时执行推荐**：\n   - 分析知识库已有相关内容（搜索 wiki 目录）\n   - 使用 tavily-search 联网搜索该主题的技术博客（偏好：原理介绍、技术分析、架构图）\n   - 整理推荐报告，包含：已有知识总结 + 推荐博客清单（标题+链接+摘要+重点内容）\n   - 报告保存至 `wiki/recommendations/YYYY-MM-DD.md`\n\n3. **下载博客到 Self learn 目录**：\n   - 使用 obsidian:defuddle skill 或 defuddle CLI 下载推荐的可访问博客\n   - 保存路径：`raw/sources/Self learn/`\n   - 文件命名：`主题-来源-标题.md`\n   - 每个主题下载 3-5 篇最优质的博客\n\n注意：\n- 搜索来源不限于 CSDN/知乎，扩展到掘金、博客园、GitHub、官方文档等\n- 博客链接使用 `[来源名](URL)` 格式\n- \"后续了解\"部分的内容不作为今日推荐依据，只看\"优先了解\"",
+      "createdAt": 1778835448085,
+      "lastFiredAt": 1778887800935,
+      "recurring": true
+    },
+    {
+      "id": "01567a7f",
+      "cron": "0 8 * * *",
+      "prompt": "请检查 raw/sources 目录下是否有新增或修改的 .md 文件。如果有变更，请按照 Karpathy Wiki 的 Ingest 工作流程处理：\n1. 读取新增/修改的来源文档\n2. 将摘要写入 wiki/summaries/[source-name].md\n3. 更新 wiki/index.md 添加新条目\n4. 更新/创建 wiki/entities/ 中的相关实体页面\n5. 更新/创建 wiki/concepts/ 中的概念页面\n6. 在 wiki/log.md 中追加条目\n\n如果没有任何新增或修改的文件，只需报告\"今日无新增来源文档\"即可。",
+      "createdAt": 1778918516611,
+      "recurring": true
+    }
+  ]
+}

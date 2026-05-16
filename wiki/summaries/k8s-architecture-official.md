@@ -1,16 +1,13 @@
 ---
 title: Kubernetes 集群架构（官方文档）
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-05-16
 tags: [Kubernetes, K8s, 架构, 官方文档]
-credibility: low
-source_dir: Self learn
+source_dir: Kunbernetes和Docker
 source_files: [K8s云原生-官方文档-K8s架构.md]
 ---
 
 # Kubernetes 集群架构（官方文档）
-
-> ⚠️ **低可信度警告**：本文来源于 AI 自主收集的网络博客，未经用户审核确认。请谨慎参考，建议阅读原文验证。
 
 Kubernetes 集群由控制平面和一组工作节点组成，用于运行容器化应用。
 
