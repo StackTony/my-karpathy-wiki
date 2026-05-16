@@ -1,10 +1,11 @@
 ---
 title: vDPA 中断与数据面机制
 created: 2026-05-13
-updated: 2026-05-13
+updated: 2026-05-14
 tags: [vdpa, virtio, 数据面, 中断注入, 硬件加速]
 source_dir: 问答整理
-source_files: []
+source_files: [virtio-architecture.md, virtio-vring-mechanism.md, kvm-interrupt-injection.md, device-passthrough.md, kvm-live-migration.md]
+source_type: wiki-derived
 ---
 
 # vDPA 中断与数据面机制

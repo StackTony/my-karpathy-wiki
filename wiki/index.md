@@ -54,24 +54,28 @@
 
 ---
 
-## 低可信度 Sources (⚠ 未审核)
+## 低可信度 Summaries (⚠ 未审核)
 
-*来源：`raw/sources/Self learn/` - AI自主探索收集的网络博客，未经用户审核确认。摘要待创建。*
+*来源：`raw/sources/Self learn/` - AI自主探索收集的网络博客，未经用户审核确认。*
 
-| 原始文档 | 主题 | 状态 |
-|----------|------|------|
-| AI infra-Rack2Cloud-GPU Fabric架构.md | AI基础设施/GPU网络 | ⚠ 待创建摘要 |
-| AI infra-vCluster-AI Factory架构.md | AI基础设施/虚拟集群 | ⚠ 待创建摘要 |
-| AI infra-Scality-计算基础设施设计.md | AI基础设施/存储设计 | ⚠ 待创建摘要 |
-| K8s云原生-官方文档-K8s架构.md | Kubernetes架构 | ⚠ 待创建摘要 |
-| 多agent编排-Comet-Agent架构模式.md | 多Agent编排 | ⚠ 待创建摘要 |
-| 多agent编排-TrueFoundry-架构模式实战.md | 多Agent编排实战 | ⚠ 待创建摘要 |
-| Harness-掘金-开源CI CD系统全解析.md | CI/CD系统 | ⚠ 待创建摘要 |
-| Harness-腾讯云-持续交付平台体验.md | CI/CD平台 | ⚠ 待创建摘要 |
-| Harness-Broadcom-GitOps架构详解.md | GitOps架构 | ⚠ 待创建摘要 |
-| Harness-官方-Pipeline设计指南.md | Pipeline设计 | ⚠ 待创建摘要 |
+| Summary | Description | Source |
+|---------|-------------|--------|
+| [[summaries/ai-infra-gpu-fabric]] | AI基础设施架构：GPU Fabric设计、控制平面vs数据平面、Training vs Inference分离 | Self learn/AI infra-Rack2Cloud |
+| [[summaries/ai-infra-ai-factory]] | AI Factory五阶段演进：从Basic GPU Cluster到全自动化AI Factory | Self learn/AI infra-vCluster |
+| [[summaries/ai-infra-compute-design]] | AI计算基础设施五层架构：GPU/RDMA/Storage/Orchestration/Monitoring | Self learn/AI infra-Scality |
+| [[summaries/k8s-architecture-official]] | Kubernetes官方架构文档：控制平面、节点组件、插件 | Self learn/K8s云原生-官方 |
+| [[summaries/multi-agent-architecture-patterns]] | Multi-Agent四种架构流派：Structuralists/Interactionists/Role-Players/Minimalists | Self learn/多agent编排-Comet |
+| [[summaries/multi-agent-production-patterns]] | Multi-Agent四种核心模式与生产基础设施需求 | Self learn/多agent编排-TrueFoundry |
+| [[summaries/harness-cicd-overview]] | Harness开源CI/CD系统：容器原生架构、AI增强自动化、企业实战案例 | Self learn/Harness-掘金 |
+| [[summaries/harness-cdas-platform]] | Harness CDaaS平台体验：自动检测新版本、ML评估部署质量 | Self learn/Harness-腾讯云 |
+| [[summaries/gitops-harness-architecture]] | GitOps架构详解：Harness + VKS + GitLab + Dynatrace + Vault + Wiz | Self learn/Harness-Broadcom |
+| [[summaries/harness-pipeline-design]] | Harness CD Pipeline设计最佳实践（官方文档） | Self learn/Harness-官方 |
+| [[summaries/agent-memory-langgraph]] | LangGraph Agent记忆系统：短期Checkpointer + 长期Store，Semantic/Episodic/Procedural类型 | Self learn/Agent记忆-LangGraph官方 |
+| [[summaries/rag-production-practice]] | RAG生产实践：混合检索+重排+数据飞轮+评测体系，Advanced RAG三层优化 | Self learn/RAG生产-腾讯云 |
+| [[summaries/plan-and-execute-agent]] | Plan-and-Execute Agent范式：Planner+Executor分离，ReWOO变量引用+LLMCompiler并行 | Self learn/PlanExecute-LangChain |
+| [[summaries/agent-long-task-production]] | Agent长期任务生产失败：30秒同步边界+Checkpointer vs持久化执行+幂等性+35分钟衰减 | Self learn/Agent长期任务-TianPan |
 
-> **使用建议**：低可信度内容需谨慎参考，建议先阅读原文验证。
+> **使用建议**：低可信度内容需谨慎参考，建议先阅读原文验证。所有摘要 frontmatter 已添加 `credibility: low` 字段。
 
 ---
 
@@ -81,9 +85,12 @@
 
 | Summary | Description | 来源类型 |
 |---------|-------------|----------|
-| [[summaries/vdpa-interrupt-datapath]] | vDPA中断与数据面：硬件直通+virtio控制面 | 问答整理（AI汇总） |
+| [[summaries/vdpa-interrupt-datapath]] | vDPA中断与数据面：硬件直通+virtio控制面 | Wiki知识整合（参考 virtio/kvm-live-migration 等） |
 
-> **说明**：wiki 目录下的内容不进行可信度分级，追溯其 `source_dir` 和 `source_files` 即可。
+> **说明**：
+> - Wiki 目录下的内容不进行可信度分级
+> - `source_type: wiki-derived` 标识来源于 wiki 内已有知识的整理汇总
+> - `source_files` 记录实际参考的 wiki 摘要文件
 
 ---
 
@@ -132,6 +139,9 @@
 | [[concepts/prompt-engineering]] | Prompt工程：提示词设计、Few-shot、Chain-of-Thought |
 | [[concepts/ai-skills]] | AI Skills技能库：Agent可调用的技能模块 |
 | [[concepts/transformer]] | Transformer：现代LLM基础架构，Self-Attention |
+| [[concepts/agent-memory]] | Agent Memory：短期/长期记忆，Semantic/Episodic/Procedural类型 |
+| [[concepts/plan-and-execute]] | Plan-and-Execute：规划执行范式，Planner+Executor分离架构 |
+| [[concepts/durable-execution]] | Durable Execution：持久化执行，自动故障恢复+幂等保证 |
 
 ---
 
@@ -142,8 +152,8 @@
 | 可信度 | 数量 | 说明 |
 |--------|------|------|
 | 高可信度 | 71 | 用户审核确认 |
-| 低可信度 | 10 | Self learn，未审核 |
-| **总计** | **81** | |
+| 低可信度 | 17 | Self learn，未审核 |
+| **总计** | **88** | |
 
 > **中可信度**：目前为 0。指提问过程中 AI 生成的**放在 raw 下**的文档，当前不存在此类文档。
 
@@ -152,11 +162,12 @@
 | 类型 | 数量 |
 |------|------|
 | Summaries (高可信度来源) | 41 |
+| Summaries (低可信度来源) | 14 |
 | Summaries (Wiki生成) | 1 |
-| **Summaries 总计** | **42** |
-| Concepts | 31 |
+| **Summaries 总计** | **56** |
+| Concepts | 34 |
 
-**Last Updated**: 2026-05-14 (自我反思: 已核实统计数据准确性)
+**Last Updated**: 2026-05-14 (自我反思: 已核实统计数据准确性，新增4个低可信度摘要+3个概念)
 
 ---
 
@@ -187,7 +198,7 @@
 - `Kunbernetes和Docker/K8s云原生-阿里云-K8S技术原理.md` → 待创建摘要
 
 **低可信度（Self learn）：**
-- `Self learn/` 下所有 10 个文件 → 待创建摘要
+- ✅ 已全部创建摘要（10个），详见"低可信度 Summaries"章节
 
 ### 可信度分级说明
 
@@ -214,7 +225,7 @@
 |------|------|----------|
 | [[summaries/dfx-tools-overview]] | `[[summaries/bpftrace-tool]]` | 引用了不存在的 bpftrace-tool 概念页面 |
 | [[concepts/lcel]] | `[[concepts/runnable]]` | 引用了不存在的 Runnable 抽象概念页面 |
-| [[recommendations/2026-05-14]] | `[[Day learn]]` | 应指向 `[[recommendations/Day learn]]` |
+| [[recommendations/2026-05-14]] | `[[Day learn]]` | 已修复为 `[[recommendations/1-Day learn]]` |
 
 **建议修复方案**：
 - 创建缺失的概念页面（bpftrace-tool、runnable）
